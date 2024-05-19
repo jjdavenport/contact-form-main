@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <fieldset>
+        <legend>Contact Us</legend>
+        <label for="first-name">First Name</label>
+        <input type="text" required />
+        <span class="error">This field is required</span>
+        <label for="last-name">Last Name</label>
+        <input type="text" required />
+        <span class="error">This field is required</span>
+        <label for="email">Email Address</label>
+        <input type="email" required />
+        <span class="error">Please enter a valid email address</span>
+        <label for="query-type">Query Type</label>
+        <input type="radio" name="query-type" />
+        <input type="radio" name="query-type" />
+        <span class="error">Please select a query type</span>
+        <label for="text-area">Message</label>
+        <textarea name="" id=""></textarea>
+        <span class="error">This field is required</span>
+        <label for="checkbox">I consent to being contacted by the team</label>
+        <input type="checkbox" />
+        <span class="error"
+          >To submit this form, please consent to being contacted</span
+        >
+        <button>Submit</button>
+      </fieldset>
+    </main>
+    <dialog>
+      <strong>Message Sent!</strong>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </dialog>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a
+        href="https://github.com/jjdavenport"
+        aria-label="link to solution github website"
+        >jjdavenport</a
+      >.
+    </div>
+  </body>
+</html>
