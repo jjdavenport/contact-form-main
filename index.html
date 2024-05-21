@@ -31,36 +31,42 @@
   <body>
     <main>
       <fieldset>
-        <legend>Contact Us</legend>
-        <label for="first-name">First Name</label>
-        <input type="text" required />
-        <span class="error">This field is required</span>
-        <label for="last-name">Last Name</label>
-        <input type="text" required />
-        <span class="error">This field is required</span>
-        <label for="email">Email Address</label>
-        <input type="email" required />
-        <span class="error">Please enter a valid email address</span>
-        <label for="query-type">Query Type</label>
-        <input type="radio" name="query-type" />
-        <input type="radio" name="query-type" />
-        <span class="error">Please select a query type</span>
-        <label for="text-area">Message</label>
-        <textarea name="" id=""></textarea>
-        <span class="error">This field is required</span>
-        <label for="checkbox">I consent to being contacted by the team</label>
-        <input type="checkbox" />
-        <span class="error"
-          >To submit this form, please consent to being contacted</span
-        >
-        <button>Submit</button>
+        <form novalidate id="form">
+          <legend>Contact Us</legend>
+          <label for="first-name">First Name</label>
+          <input class="input-text" type="text" required />
+          <span class="error-text">This field is required</span>
+          <label for="last-name">Last Name</label>
+          <input class="input-text" type="text" required />
+          <span class="error-text">This field is required</span>
+          <label for="email">Email Address</label>
+          <input class="input-email" type="email" id="email-input" required />
+          <span class="error">Please enter a valid email address</span>
+          <label for="query-type">Query Type</label>
+          <div class="radio">
+            <label for="general-enquiry">General Enquiry</label>
+            <input class="input-radio" type="radio" name="query-type" />
+            <label for="support-request">Support Request</label>
+            <input class="input-radio" type="radio" name="query-type" />
+            <span class="error">Please select a query type</span>
+          </div>
+          <label for="text-area">Message</label>
+          <textarea name="text-area" class="input-text"></textarea>
+          <span class="error-text">This field is required</span>
+          <label for="checkbox">I consent to being contacted by the team</label>
+          <input type="checkbox" />
+          <span class="error"
+            >To submit this form, please consent to being contacted</span
+          >
+          <button type="submit" id="submit-button">Submit</button>
+        </form>
       </fieldset>
     </main>
     <dialog>
       <strong>Message Sent!</strong>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </dialog>
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by
@@ -69,6 +75,6 @@
         aria-label="link to solution github website"
         >jjdavenport</a
       >.
-    </div>
+    </footer>
   </body>
 </html>
