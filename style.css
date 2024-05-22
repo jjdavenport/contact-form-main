@@ -33,3 +33,7 @@ form {
 .error-text-active {
   display: block;
 }
+
+.dialog-active {
+  display: block;
+}

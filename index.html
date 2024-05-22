@@ -48,13 +48,19 @@
             <input class="input-radio" type="radio" name="query-type" />
             <label for="support-request">Support Request</label>
             <input class="input-radio" type="radio" name="query-type" />
-            <span class="error">Please select a query type</span>
+            <span class="error" id="radio-error"
+              >Please select a query type</span
+            >
           </div>
           <label for="text-area">Message</label>
-          <textarea name="text-area" class="input-text"></textarea>
+          <textarea
+            id="text-area"
+            name="text-area"
+            class="input-text"
+          ></textarea>
           <span class="error-text">This field is required</span>
           <label for="checkbox">I consent to being contacted by the team</label>
-          <input type="checkbox" />
+          <input type="checkbox" id="checkbox-input" />
           <span class="error"
             >To submit this form, please consent to being contacted</span
           >
@@ -62,7 +68,7 @@
         </form>
       </fieldset>
     </main>
-    <dialog>
+    <dialog id="dialog">
       <strong>Message Sent!</strong>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </dialog>
