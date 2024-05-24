@@ -95,3 +95,19 @@ function validateForm() {
     checkBox.checked = false;
   }
 }
+
+function linkBtns() {
+  const button = document.querySelectorAll("button");
+  button.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      button.forEach((b) => b.classList.remove("button-active"));
+      btn.classList.add("button-active");
+      const radioBtn = btn.querySelector(".input-radio");
+      if (radioBtn) {
+        radioBtn.checked = true;
+      }
+    });
+  });
+}
+
+linkBtns();
