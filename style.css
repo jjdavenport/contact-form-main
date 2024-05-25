@@ -17,6 +17,12 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "karla", sans-serif;
+  font-size: 1rem;
+}
+
+.attribution a {
+  font-size: 0.6875rem;
+  color: hsl(169, 82%, 27%);
 }
 
 main {
@@ -25,28 +31,76 @@ main {
   padding: 1rem;
 }
 
-button {
-  background: none;
-  border: 0.0625rem solid hsl(186, 15%, 59%);
-  border-radius: 0.625rem;
+legend {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(187, 24%, 22%);
 }
 
-input {
+.name-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: hsl(187, 24%, 22%);
+  font-weight: 400;
+}
+
+.required::after {
+  content: " *";
+  color: hsl(169, 82%, 27%);
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: 0.0625rem solid hsl(186, 15%, 59%);
+  border-radius: 0.625rem;
+  height: 2.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.input-text,
+.input-email {
   outline: 0.0625rem solid hsl(186, 15%, 59%);
   border: none;
+  border-radius: 0.375rem;
 }
 
 .input-radio {
   outline: none;
 }
 
-/*
-input:focus {
-  outline: 0.125rem solid hsl(148, 38%, 91%);
-}
-*/
-
 input:hover {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  height: 20ch;
+}
+
+textarea:hover {
   cursor: pointer;
 }
 
@@ -63,7 +117,19 @@ fieldset {
   height: 100%;
 }
 
-.input:focus {
+.radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input:focus,
+textarea:focus {
   outline: 0.0625rem solid hsl(169, 82%, 27%);
 }
 
@@ -74,6 +140,10 @@ fieldset {
 
 .error {
   display: none;
+}
+
+.error-input {
+  outline: 0.0625rem solid red;
 }
 
 #radio-error,
@@ -92,6 +162,13 @@ form {
   display: block;
 }
 
+.checkbox-row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
 .dialog-active {
   display: block;
 }
@@ -100,14 +177,27 @@ form {
   background-color: hsl(148, 38%, 91%);
 }
 
+#submit-button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(169, 82%, 27%);
+}
+
 @media screen and (width >= 40rem) {
   body {
     padding: 0;
     place-items: center;
   }
   main {
-    height: 60vh;
-    width: 50vw;
+    height: fit-content;
+    width: fit-content;
+  }
+  .name-row {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .name {
+    display: flex;
+    flex-direction: column;
   }
   footer {
     position: static;
@@ -115,5 +205,11 @@ form {
     left: auto;
     transform: none;
     white-space: normal;
+  }
+  .radio-buttons {
+    flex-direction: row;
+  }
+  .radio-button {
+    flex: 1;
   }
 }

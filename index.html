@@ -23,7 +23,6 @@
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
         text-decoration: none;
       }
     </style>
@@ -33,45 +32,59 @@
       <fieldset>
         <form novalidate id="form">
           <legend>Contact Us</legend>
-          <label for="first-name">First Name</label>
-          <input class="input-text" type="text" required />
-          <span class="error-text">This field is required</span>
-          <label for="last-name">Last Name</label>
-          <input class="input-text" type="text" required />
-          <span class="error-text">This field is required</span>
-          <label for="email">Email Address</label>
+          <div class="name-row">
+            <div class="name">
+              <label class="required" for="first-name">First Name</label>
+              <input class="input-text" type="text" required />
+              <span class="error-text">This field is required</span>
+            </div>
+            <div class="name">
+              <label class="required" for="last-name">Last Name</label>
+              <input class="input-text" type="text" required />
+              <span class="error-text">This field is required</span>
+            </div>
+          </div>
+          <label class="required" for="email">Email Address</label>
           <input class="input-email" type="email" id="email-input" required />
           <span class="error">Please enter a valid email address</span>
-          <label for="query-type">Query Type</label>
           <div class="radio">
-            <button>
-              <label for="general-enquiry"
-                >General Enquiry
-                <input class="input-radio" type="radio" name="query-type" />
-              </label>
-            </button>
-            <button>
-              <label for="support-request"
-                >Support Request
-                <input class="input-radio" type="radio" name="query-type" />
-              </label>
-            </button>
+            <label class="required" for="query-type">Query Type</label>
+            <div class="radio-buttons">
+              <button class="radio-button">
+                <label for="general-enquiry"
+                  >General Enquiry
+                  <input class="input-radio" type="radio" name="query-type" />
+                </label>
+              </button>
+              <button class="radio-button">
+                <label for="support-request"
+                  >Support Request
+                  <input class="input-radio" type="radio" name="query-type" />
+                </label>
+              </button>
+            </div>
             <span class="error" id="radio-error"
               >Please select a query type</span
             >
           </div>
-          <label for="text-area">Message</label>
+          <label class="required" for="text-area">Message</label>
           <textarea
             id="text-area"
             name="text-area"
             class="input-text"
           ></textarea>
           <span class="error-text">This field is required</span>
-          <label for="checkbox">I consent to being contacted by the team</label>
-          <input type="checkbox" id="checkbox-input" />
-          <span class="error"
-            >To submit this form, please consent to being contacted</span
-          >
+          <div class="checkbox">
+            <div class="checkbox-row">
+              <label class="required" for="checkbox"
+                >I consent to being contacted by the team</label
+              >
+              <input type="checkbox" id="checkbox-input" />
+            </div>
+            <span id="checkbox-error" class="error"
+              >To submit this form, please consent to being contacted</span
+            >
+          </div>
           <button type="submit" id="submit-button">Submit</button>
         </form>
       </fieldset>
