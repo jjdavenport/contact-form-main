@@ -105,9 +105,9 @@ textarea {
 .input-radio {
   appearance: none;
   -webkit-appearance: none;
-  width: 1.15rem; /* Increased size to accommodate the border */
-  height: 1.15rem; /* Increased size to accommodate the border */
-  border: 0.125rem solid hsl(186, 15%, 59%); /* Slightly thicker border */
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.125rem solid hsl(186, 15%, 59%);
   border-radius: 50%;
   position: relative;
   cursor: pointer;
@@ -217,10 +217,10 @@ form {
   width: 1rem;
   appearance: none;
   -webkit-appearance: none;
-  border: 0.0625rem solid #86a2a5; /* Add a border for unchecked state */
-  border-radius: 0.25rem; /* Add rounded corners if needed */
+  border: 0.0625rem solid #86a2a5;
+  border-radius: 0.25rem;
   cursor: pointer;
-  position: relative; /* Position relative to place the SVG checkmark correctly */
+  position: relative;
 }
 
 #checkbox-input:checked {
@@ -279,6 +279,7 @@ footer {
 @media screen and (width >= 30rem) {
   body {
     padding: 0;
+    height: 100vh;
     place-items: center;
   }
   main {
