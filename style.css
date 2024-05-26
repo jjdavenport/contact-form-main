@@ -76,6 +76,11 @@ button:hover {
   cursor: pointer;
 }
 
+button:focus {
+  outline: 0.0625rem solid hsl(169, 82%, 27%);
+  background-color: hsl(148, 38%, 91%);
+}
+
 button label {
   display: flex;
   flex-direction: row-reverse;
@@ -98,7 +103,38 @@ textarea {
 }
 
 .input-radio {
-  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.15rem; /* Increased size to accommodate the border */
+  height: 1.15rem; /* Increased size to accommodate the border */
+  border: 0.125rem solid hsl(186, 15%, 59%); /* Slightly thicker border */
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.input-radio:checked {
+  border-color: hsl(169, 82%, 27%);
+}
+
+.input-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: hsl(169, 82%, 27%);
+  border-radius: 50%;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+input:hover {
+  cursor: pointer;
 }
 
 input:hover {
@@ -136,7 +172,7 @@ fieldset {
 
 .input-text:focus,
 .input-email:focus {
-  outline: 0.125rem solid hsl(169, 82%, 27%);
+  outline: 0.0625rem solid hsl(169, 82%, 27%);
 }
 
 .error-text {
@@ -170,13 +206,31 @@ form {
 
 .checkbox-row {
   display: flex;
+  align-items: center;
   flex-direction: row-reverse;
   justify-content: flex-end;
   gap: 1rem;
 }
 
+#checkbox-input {
+  height: 1rem;
+  width: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0.0625rem solid #86a2a5; /* Add a border for unchecked state */
+  border-radius: 0.25rem; /* Add rounded corners if needed */
+  cursor: pointer;
+  position: relative; /* Position relative to place the SVG checkmark correctly */
+}
+
+#checkbox-input:checked {
+  background-image: url(./assets/images/icon-checkbox-check.svg);
+  background-position: center;
+  border: none;
+}
+
 .button-active {
-  outline: 0.125rem solid hsl(169, 82%, 27%);
+  outline: 0.0625rem solid hsl(169, 82%, 27%);
   background-color: hsl(148, 38%, 91%);
 }
 
